@@ -1,6 +1,6 @@
 local mod = get_mod("RejoinMission")
 
---[[
+---[[
 mod.rejoin = function()
     if not Managers.mechanism then
         mod:echo("Error - Managers.mechanism = nil")
@@ -19,6 +19,7 @@ mod:command("rejoin", "Rejoin ongoing mission, if any", function()
 end)
 --]]
 
+--[[
 local retry_join_function = function(self)
     local mechanism = self._mechanism
     if mechanism and mechanism._retry_join then
@@ -40,3 +41,4 @@ mod:command("rejoin", "Rejoin ongoing mission, if any", function()
         Managers.mechanism:retry_join()
     end
 end)
+--]]
